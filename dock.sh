@@ -3,4 +3,4 @@ docker run -d \
   -v /dev/shm:/dev/shm \
   -v ${HOME}/.atom:/home/atom/.atom \
   -e DISPLAY \
-  atom
+  dunossauro/mypy37env

@@ -33,8 +33,10 @@ dpkg -i /tmp/atom.deb && \
 rm -f /tmp/atom.deb && \
 useradd -d /home/atom -m atom && \
 pip install ipython ipdb toolz && \
-apm install platiformio-ide-terminal linter-pylama && \
+apm install platformio-ide-terminal linter linter-pylama
 
 USER atom
 
-CMD ["mkdir","workdir","&&","/usr/bin/atom","-f","./workdir"]
+RUN mkdir -p ~/workdir
+
+CMD ["/usr/bin/atom","-f","~/workdir"]
